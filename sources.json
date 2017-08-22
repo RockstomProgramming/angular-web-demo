@@ -2,7 +2,10 @@
 	"scssDir" : "./sources/scss/*.scss",
 	"templatesDir" : "./sources/templates/**",
 	"jsDir" : "./sources/js/**",
+	"testDir" : "./sources/tests/**",
 	"concatJs" : ["../public/js/scripts-dev.min.js", "../public/js/scripts.min.js"],
-	"scriptsDev" : "<script type=\"text/javascript\" src=\"./js/scripts.js\"></script>",
-	"scriptsPrd" : "<script type=\"text/javascript\" src=\"./js/scripts.min.js\"></script>"
+	"scriptsDev" : ["./js/scripts-dev.min.js", "./js/scripts.js"],
+	"scriptsPrd" : ["./js/scripts-dev.min.js", "./js/scripts.min.js"],
+	"cssDev" : "./css/main.css",
+	"cssPrd" : "./css/main.min.css"
 }
