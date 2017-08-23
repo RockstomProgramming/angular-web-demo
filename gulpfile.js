@@ -10,7 +10,7 @@ const replace = require('gulp-html-replace');
 const util = require('gulp-util');
 const clean = require('gulp-clean');
 const autoprefixer = require('gulp-autoprefixer');
-const jasmine = require('gulp-jasmine');
+const Server = require('karma').Server;
 
 const sourcesDev = require('./scripts.json');
 const sources = require('./sources.json');
@@ -79,10 +79,11 @@ gulp.task('webserver', 'Executa um server', function() {
     }));
 });
 
-gulp.task('test', 'Executa os testes unitários', function() {
-	return gulp.src(sources.testDir)
-	    // gulp-jasmine works on filepaths so you can't have any plugins before it 
-	    .pipe(jasmine());
+gulp.task('test', 'Executa os testes unitários', function(done) {
+	new Server({
+	    configFile: __dirname + '/karma.conf.js',
+	    singleRun: true
+	}, done).start();
 });
 
 gulp.task('watch', 'Escuta as alterações nos arquivos de desenvolvimento, e executa a build', function() {

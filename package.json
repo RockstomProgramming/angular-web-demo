@@ -20,11 +20,14 @@
     "gulp-concat": "^2.6.1",
     "gulp-help": "^1.6.1",
     "gulp-html-replace": "^1.6.2",
-    "gulp-jasmine": "^2.4.2",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0",
     "gulp-webserver": "^0.9.1",
+    "jasmine-core": "^2.7.0",
+    "karma": "^1.7.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.0",
     "pump": "^1.0.2",
     "run-sequence": "^2.1.0"
   }
